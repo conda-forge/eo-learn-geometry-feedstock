@@ -26,8 +26,6 @@ requirements:
     - rasterio
     - scikit-image >=0.15.0
     - shapely
-    - gdal 
-    - fiona
     - pillow
 test:
   imports:
