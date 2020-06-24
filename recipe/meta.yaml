@@ -1,5 +1,5 @@
 {% set name = "eo-learn-geometry" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ec7cd41519f4d858a9dbd31578a73cae5aff771979afb47becc14bb2a39b9fbd
+  sha256: 915a3659cd820744b1d881405d26a79aaf5de7cf3417d16b23b64d9dea80f410
 
 build:
   number: 0
