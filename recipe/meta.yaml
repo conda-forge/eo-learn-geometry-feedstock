@@ -10,7 +10,7 @@ source:
   sha256: 780aff2f1e3d0a6f0780f2aef88c524d9aafb3288602367a8a48e3d305aed450
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [(win and vc<14) or py<35]
 
@@ -45,6 +45,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - mwilson8
     - dcunn
     - oblute
