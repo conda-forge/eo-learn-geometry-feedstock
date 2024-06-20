@@ -1,5 +1,5 @@
 {% set name = "eo-learn-geometry" %}
-{% set version = "0.10.1" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,27 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2c31ac084e3ecd8976187ff25318eb63d2746f2a548f4f58c44bc9635ee659b6
+  sha256: 9c6f38fd1e000f811702b62cb7a109cc7a0dcee04916b8e198944d07936bb7b0
 
 build:
-  number: 1
+  noarch: python
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [(win and vc<14) or py<35]
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.7
   run:
-    - descartes
-    - eo-learn-core
-    - geopandas
-    - python
-    - rasterio
+    - eo-learn-core >=1.0.0
+    - geopandas >=0.8.1
+    - python >=3.7
+    - rasterio >=1.2.7
     - scikit-image >=0.15.0
     - shapely
-    - pillow
-    - dataclasses
 
 test:
   imports:
